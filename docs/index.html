@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#273429">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src https://raw.githubusercontent.com https://*.lhr.life https://*.trycloudflare.com https://*.localhost.run; base-uri 'none'; form-action 'none'">
+  <title>Join a shared fly world · Rot Wars</title>
+  <link rel="stylesheet" href="./portal.css">
+</head>
+<body>
+  <main>
+    <header class="brand"><span class="mark" aria-hidden="true">✳</span> ROT WARS <span class="tag">Shared fly world</span></header>
+    <section class="hero">
+      <div><div class="eyebrow">A shared world. Independent brains.</div><h1>Your brain.<br>One fly. <span>Our world.</span></h1><p class="intro">Bring a locally running fly brain into the same little world. Your fly senses its surroundings, its neural activity moves its body, and its learning stays with you.</p></div>
+      <div class="specimen" aria-hidden="true"><svg width="138" height="138" viewBox="0 0 64 64"><rect width="64" height="64" rx="17" fill="#b4ed55"/><g fill="none" stroke="#1a2516" stroke-width="3" stroke-linecap="round"><ellipse cx="23" cy="25" rx="9" ry="16" transform="rotate(-36 23 25)"/><ellipse cx="41" cy="25" rx="9" ry="16" transform="rotate(36 41 25)"/><path d="m22 39-7 9m12-4-4 10m19-15 7 9m-12-4 4 10"/></g><ellipse cx="32" cy="38" rx="8" ry="15" fill="#1a2516"/><circle cx="32" cy="22" r="8" fill="#1a2516"/><circle cx="28" cy="20" r="3" fill="#b4ed55"/><circle cx="36" cy="20" r="3" fill="#b4ed55"/></svg></div>
+    </section>
+    <section class="world-status" aria-label="World availability">
+      <div class="status-copy" role="status" aria-live="polite"><span id="status-dot" class="status-dot"></span><div><h2 id="status-title">An invitation brings you into a world</h2><p id="status-detail">You can download and set up the app now. Open the invitation your host sends when you are ready to join.</p></div></div>
+      <button id="refresh" class="text-button" type="button" hidden>Check again ↻</button>
+    </section>
+    <div class="requirements"><strong>Before you begin:</strong> Windows 10 or 11 · compatible NVIDIA GPU · <a href="https://www.python.org/downloads/release/python-3119/" target="_blank" rel="noreferrer noopener">Python 3.11</a> · <a href="https://nodejs.org/dist/latest-v22.x/" target="_blank" rel="noreferrer noopener">Node.js 22</a>. Allow several GB of free space and time for first setup. The supplied GPU runtime was tested on a GTX 980 Ti; newer GPUs may need a newer PyTorch build.</div>
+    <section class="steps" aria-label="Join in three steps">
+      <article class="step"><div class="number">01 / GET THE KIT</div><h2>Bring your own brain</h2><p>Download the latest Windows kit and extract the entire ZIP to a folder on your PC. It includes the app and fly connectome model files.</p><a id="download" class="action primary" href="https://github.com/markjspivey-xwisee/rot-wars-multiplayer/releases/latest/download/Rot-Wars-Multiplayer-Windows.zip" rel="noreferrer">Download latest kit ↓</a><p class="note">The download works even when a world is offline.</p></article>
+      <article class="step"><div class="number">02 / SET UP ONCE</div><h2>Give your fly a home</h2><p>With Python 3.11 and Node.js 22 installed, run <code>Setup Multiplayer.cmd</code> in the extracted folder. Wait for setup to finish.</p><p>Then run <code>Start Multiplayer.cmd</code> to open your local app.</p></article>
+      <article class="step"><div class="number">03 / JOIN THE WORLD</div><h2>Meet the other flies</h2><p>With your local app running and the world available, open this invitation in it. Choose a name and connect your local brain.</p><a id="open-app" class="action disabled" aria-disabled="true" tabindex="-1" rel="noreferrer">Open my local app ↗</a><p id="open-app-note" class="note">An invitation and an available host are needed.</p></article>
+    </section>
+    <section id="share" class="share" hidden><label for="invitation">Keep this invitation</label><div class="share-row"><input id="invitation" readonly aria-label="Private world invitation"><button id="copy" class="action" type="button">Copy invitation</button></div><p id="copy-status" role="status" aria-live="polite"></p><p class="fine">This page finds the host’s latest published address when their temporary connection changes. It refreshes while open; you can return using this same invitation.</p><p class="fine">Anyone with this link can enter the world. Share it only with your players. The host must keep their PC awake and the world running. Temporary internet interruptions can still happen.</p></section>
+    <noscript><p class="fine">JavaScript is needed to find the current world address. The setup-kit download above still works.</p></noscript>
+    <footer>One local brain per fly · Coarse fly embodiment · Experimental learning · Your computer keeps its neural state and learned memory</footer>
+  </main>
+  <script type="module" src="./portal.js"></script>
+</body>
+</html>
